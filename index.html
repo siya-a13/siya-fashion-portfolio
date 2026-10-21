@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Siya Khanna — Fashion Portfolio</title>
+<meta name="description" content="Siya Khanna — fashion, material exploration, hand embroidery, eco-printing, product development and Tangy Stitch.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#18231e;--forest:#163b31;--cream:#f5efe4;--paper:#fbf8f1;--rose:#c9908a;--ochre:#b9823c;--line:rgba(24,35,30,.18);--muted:#6f695f;--serif:'Playfair Display',Georgia,serif;--sans:'Manrope',Arial,sans-serif;--mono:'DM Mono',monospace}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);overflow-x:hidden}img{max-width:100%;display:block}a{color:inherit;text-decoration:none}button{font:inherit}.grain{position:fixed;inset:0;z-index:99;pointer-events:none;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.nav{position:fixed;z-index:90;top:0;left:0;right:0;height:74px;padding:0 30px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(to bottom,rgba(245,239,228,.97),rgba(245,239,228,.80));backdrop-filter:blur(8px)}.nav-brand{font:500 9px var(--mono);letter-spacing:.15em;text-transform:uppercase}.nav-links{display:flex;gap:25px;font:400 8px var(--mono);letter-spacing:.13em;text-transform:uppercase}.nav-links a{opacity:.55}.nav-links a:hover{opacity:1}.progress{position:fixed;z-index:91;left:0;top:0;width:100%;height:2px;background:transparent}.progress i{display:block;height:100%;width:0;background:var(--rose)}
+.wrap{width:min(1440px,92vw);margin:auto}.eyebrow{font:500 8px var(--mono);letter-spacing:.16em;text-transform:uppercase}.serif{font-family:var(--serif)}.caption{font:400 8px/1.5 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.rule{height:1px;background:var(--line)}
+/* cover */
+.cover{min-height:100svh;padding:110px 4vw 35px;display:grid;grid-template-columns:.72fr 1.28fr;gap:5vw;align-items:center;position:relative}.cover-copy{padding-left:3vw;align-self:center}.cover-kicker{display:flex;gap:15px;align-items:center;margin-bottom:24px}.cover-kicker:after{content:"";width:70px;height:1px;background:var(--rose)}.cover h1{font:400 clamp(78px,10vw,158px)/.77 var(--serif);letter-spacing:-.065em;margin:0}.cover h1 em{font-style:italic;margin-left:1.3em}.cover-lede{max-width:390px;margin:35px 0 0 6vw;font-size:14px;line-height:1.75;color:#514d45}.cover-meta{display:flex;gap:20px;margin:25px 0 0 6vw;font:8px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#7b746a}.cover-art{height:76vh;min-height:600px;position:relative}.cover-art .hero-main{position:absolute;right:8%;top:0;width:59%;height:82%;overflow:hidden}.cover-art .hero-main img{width:100%;height:100%;object-fit:cover}.cover-art .hero-side{position:absolute;left:3%;bottom:5%;width:33%;height:48%;overflow:hidden;border:9px solid var(--cream)}.cover-art .hero-side img{width:100%;height:100%;object-fit:cover}.cover-note{position:absolute;right:0;bottom:8%;writing-mode:vertical-rl;font:8px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:#766f66}.cover-number{position:absolute;left:0;bottom:4%;font:9px var(--mono);letter-spacing:.14em}.cover-scroll{position:absolute;bottom:23px;right:4vw;font:8px var(--mono);letter-spacing:.14em;text-transform:uppercase}
+/* intro */
+.intro{background:var(--forest);color:#f9f3e8;padding:15vh 0 16vh}.intro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:10vw;align-items:end}.intro h2{font:400 clamp(60px,8vw,125px)/.82 var(--serif);letter-spacing:-.055em;margin:0}.intro h2 em{font-style:italic;color:#e4b5aa}.intro-copy{max-width:500px}.intro-copy p{font-size:15px;line-height:1.8;color:rgba(249,243,232,.78)}.intro-copy .signature{margin-top:45px;font:8px/1.7 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:rgba(249,243,232,.5)}
+/* craft */
+.craft{padding:14vh 0 12vh;background:var(--paper)}
+.craft-header{display:grid;grid-template-columns:.82fr 1.18fr;gap:8vw;align-items:end;margin-bottom:72px}
+.craft-header h2{font:400 clamp(64px,8vw,130px)/.79 var(--serif);letter-spacing:-.06em;margin:0}.craft-header h2 em{font-style:italic}
+.craft-header-copy{max-width:560px;font-size:14px;line-height:1.8;color:#575149}.craft-header-copy strong{color:var(--forest);font-weight:600}
+.craft-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:25px}.craft-tags span{padding:9px 12px;border:1px solid var(--line);font:8px var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.craft-story{margin-top:10px}.story-kicker{display:flex;justify-content:space-between;align-items:end;margin-bottom:22px;border-top:1px solid var(--line);padding-top:16px}.story-kicker h3{font:400 clamp(38px,4.6vw,72px)/.9 var(--serif);letter-spacing:-.045em;margin:0}.story-kicker h3 em{font-style:italic}.story-kicker span{font:8px var(--mono);letter-spacing:.13em;text-transform:uppercase;color:var(--muted);max-width:240px;text-align:right;line-height:1.7}
+.material-grid{display:grid;grid-template-columns:1.18fr .82fr;grid-template-rows:330px 330px;gap:16px}.material-card{position:relative;overflow:hidden;background:#eee7dc}.material-card img{width:100%;height:100%;object-fit:cover}.material-card.result{grid-row:1/3}.material-card.result img{object-position:center}.material-card.model img{object-position:center 30%}.material-card.detail img{object-position:center}.material-card figcaption,.hand-card figcaption{position:absolute;left:14px;bottom:14px;background:rgba(251,248,241,.94);padding:9px 11px}.material-card figcaption b,.hand-card figcaption b{display:block;font:400 20px var(--serif)}.material-card figcaption span,.hand-card figcaption span{display:block;margin-top:3px;font:8px var(--mono);letter-spacing:.09em;text-transform:uppercase;color:#756e65}
+.material-note{display:grid;grid-template-columns:1fr 2fr;gap:7vw;padding:50px 5vw 80px}.material-note h4{font:400 clamp(35px,4vw,62px)/.9 var(--serif);letter-spacing:-.04em;margin:0}.material-note p{font-size:13px;line-height:1.85;color:#625b52;max-width:600px;margin:0}
+.hand-story{display:grid;grid-template-columns:.72fr 1.28fr;gap:6vw;align-items:start}.hand-copy{position:sticky;top:120px}.hand-copy h3{font:400 clamp(42px,5vw,76px)/.9 var(--serif);margin:14px 0 22px;letter-spacing:-.045em}.hand-copy h3 em{font-style:italic}.hand-copy p{font-size:13px;line-height:1.8;color:#625b52;max-width:350px}.hand-list{margin-top:32px;border-top:1px solid var(--line)}.hand-list div{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line);font:8px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#70685e}.hand-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.hand-card{position:relative;overflow:hidden;background:#eee7dc}.hand-card img{width:100%;height:100%;object-fit:cover}.hand-card.tall{grid-row:span 2;height:700px}.hand-card:not(.tall){height:342px}.hand-card.final{grid-column:1/-1;height:520px}.hand-card.final img{object-position:center 35%}
+/* garment archive */
+.archive{background:var(--cream);padding:14vh 0 12vh}.archive-head{display:flex;justify-content:space-between;align-items:end;gap:50px;margin-bottom:65px}.archive-head h2{font:400 clamp(64px,8vw,130px)/.78 var(--serif);letter-spacing:-.06em;margin:0}.archive-head h2 em{font-style:italic}.archive-head p{max-width:390px;font-size:13px;line-height:1.8;color:#655e55;margin:0}.archive-ai-note{margin-top:18px;padding-left:12px;border-left:1px solid var(--ochre);font:7px/1.7 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#81786d;max-width:390px}
+.garment-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;align-items:start}.garment{position:relative;overflow:hidden;background:#e7e0d5}.garment img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.16,1,.3,1);filter:saturate(.96)}.garment:hover img{transform:scale(1.035)}
+/* deliberate editorial rhythm: no arbitrary offsets */
+.garment:nth-child(1){grid-column:1/6;height:690px}.garment:nth-child(2){grid-column:7/10;height:500px;margin-top:90px}.garment:nth-child(3){grid-column:10/13;height:610px}.garment:nth-child(4){grid-column:2/6;height:600px;margin-top:12px}.garment:nth-child(5){grid-column:6/10;height:690px;margin-top:105px}.garment:nth-child(6){grid-column:10/13;height:530px;margin-top:18px}.garment:nth-child(7){grid-column:1/5;height:610px;margin-top:20px}.garment:nth-child(8){grid-column:5/9;height:600px;margin-top:105px}.garment:nth-child(9){grid-column:9/13;height:650px;margin-top:20px}.garment:nth-child(10){grid-column:3/7;height:520px;margin-top:90px}
+.garment-info{position:absolute;left:14px;right:14px;bottom:14px;display:flex;justify-content:space-between;align-items:end;color:white;text-shadow:0 1px 12px rgba(0,0,0,.4)}.garment-info b{font:400 23px var(--serif)}.garment-info span{font:8px var(--mono);letter-spacing:.1em;text-transform:uppercase;text-align:right}.archive-note{margin-top:60px;padding-top:17px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;font:8px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#756e65}
+/* process */
+.process{background:#e8e1d6;padding:15vh 0}.process-head{display:grid;grid-template-columns:.9fr 1.1fr;gap:8vw;align-items:end;margin-bottom:75px}.process-head h2{font:400 clamp(62px,8vw,125px)/.8 var(--serif);letter-spacing:-.055em;margin:0}.process-head h2 em{font-style:italic}.process-head p{font-size:14px;line-height:1.85;color:#5e574f;max-width:480px}.process-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}.process-board{position:relative;overflow:hidden;background:var(--paper)}.process-board img{width:100%;height:100%;object-fit:cover}.process-board.large{height:690px}.process-board.small{height:330px}.process-right{display:grid;gap:18px}.process-label{position:absolute;left:14px;top:14px;background:rgba(251,248,241,.9);padding:8px 10px;font:8px var(--mono);letter-spacing:.1em;text-transform:uppercase}.process-caption{margin-top:22px;display:grid;grid-template-columns:100px 1fr;gap:30px;padding-top:16px;border-top:1px solid var(--line)}.process-caption span{font:8px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#746c63}.process-caption p{margin:0;font-size:13px;line-height:1.7;color:#5d564d;max-width:580px}
+/* tangy */
+.brand{background:var(--forest);color:#f8f1e6;padding:15vh 0 0}.brand-head{display:grid;grid-template-columns:1fr 1fr;gap:9vw;align-items:end;margin-bottom:75px}.brand-head h2{font:400 clamp(62px,8vw,128px)/.79 var(--serif);letter-spacing:-.06em;margin:0}.brand-head h2 em{font-style:italic;color:#e3b0a6}.brand-head p{font-size:14px;line-height:1.85;color:rgba(248,241,230,.72);max-width:500px}.brandboard{width:100%;background:#eee7dc;padding:10px}.brandboard img{width:100%;height:auto}.brandboard-note{width:68%;margin:16px auto 0;display:flex;justify-content:space-between;gap:20px;color:rgba(248,241,230,.55);font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase}.brand-web{margin-top:18px;display:grid;grid-template-columns:1.25fr .75fr;gap:18px}.web-main,.web-side{overflow:hidden;background:#0c1713}.web-main img,.web-side img{width:100%;height:100%;object-fit:cover}.web-main{height:650px}.web-side{display:grid;grid-template-rows:1fr 1fr;gap:18px}.web-side figure{margin:0;min-height:0;overflow:hidden;position:relative}.web-side figcaption,.web-main figcaption{position:absolute;left:13px;bottom:13px;background:rgba(245,239,228,.93);color:var(--ink);padding:8px 10px;font:8px var(--mono);letter-spacing:.1em;text-transform:uppercase}.brand-text{padding:110px 7vw;display:grid;grid-template-columns:.8fr 1.2fr;gap:8vw;align-items:center}.brand-text .small{font:8px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:rgba(248,241,230,.5)}.brand-text h3{font:400 clamp(44px,5.5vw,86px)/.88 var(--serif);letter-spacing:-.045em;margin:0}.brand-text h3 em{font-style:italic;color:#e3b0a6}.brand-text p{font-size:14px;line-height:1.85;color:rgba(248,241,230,.7);max-width:500px}
+/* future */
+.future{background:var(--paper);padding:16vh 0 10vh}.future-grid{display:grid;grid-template-columns:1fr .9fr;gap:10vw;align-items:start}.future h2{font:400 clamp(68px,9vw,145px)/.78 var(--serif);letter-spacing:-.065em;margin:0}.future h2 em{font-style:italic}.future-copy{padding-top:12px}.future-copy p{font-size:15px;line-height:1.9;color:#5f584f;max-width:470px}.future-card{margin-top:45px;border-top:1px solid var(--line);padding-top:18px}.future-card span{font:8px var(--mono);letter-spacing:.13em;text-transform:uppercase;color:#756e65}.future-card strong{display:block;font:400 25px var(--serif);margin-top:10px}.footer{margin-top:130px;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font:8px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#756e65}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}.reveal.in{opacity:1;transform:none}.delay1{transition-delay:.12s}.delay2{transition-delay:.22s}
+@media(max-width:900px){.nav-links a:nth-child(n+4){display:none}.cover{grid-template-columns:1fr;padding-top:120px}.cover-copy{padding-left:0}.cover-lede,.cover-meta{margin-left:0}.cover-art{height:70vh;margin-top:35px}.intro-grid,.craft-header,.craft-feature,.craft-manifesto,.craft-sequence,.process-head,.process-layout,.brand-head,.brand-web,.brand-text,.future-grid{grid-template-columns:1fr;gap:45px}.craft-feature-main{min-height:520px}.craft-feature-side{grid-template-columns:1fr 1fr;grid-template-rows:none}.craft-mini{min-height:360px}.sequence-copy{position:static}.garment-grid{grid-template-columns:1fr 1fr}.garment:nth-child(n){grid-column:auto!important;margin-top:0!important;height:560px}.process-board.large{height:580px}.web-main{height:500px}.web-side{height:500px}.brand-text{padding-left:0;padding-right:0}.future-grid{gap:60px}}
+@media(max-width:600px){.nav{padding:0 16px}.nav-links{gap:12px}.cover{padding-left:6vw;padding-right:6vw}.cover h1{font-size:23vw}.cover-art{min-height:480px;height:65vh}.cover-art .hero-main{width:67%;height:75%;right:3%}.cover-art .hero-side{width:39%;height:44%;left:0}.cover-note{display:none}.intro,.craft,.archive,.process,.brand,.future{padding-top:12vh}.wrap{width:88vw}.craft-feature-side{grid-template-columns:1fr}.craft-mini{min-height:330px}.craft-manifesto{padding:75px 0}.sequence-images{grid-template-columns:1fr}.seq-card.tall,.seq-card.wide{grid-column:auto;grid-row:auto}.seq-card img,.seq-card.tall img,.seq-card.wide img{min-height:390px}.garment-grid{grid-template-columns:1fr}.garment:nth-child(n){height:520px}.archive-note{display:block}.archive-note span{display:block;margin-top:10px}.process-caption{grid-template-columns:1fr;gap:10px}.brand-web{gap:12px}.web-side{gap:12px;height:420px}.web-main{height:420px}.brand-text{padding:75px 0}.footer{display:block}.footer span{display:block;margin-top:10px}}
+
+/* v5 corrections: tighter rhythm, larger labels, richer motion */
+.nav{height:88px;padding:0 34px}.nav-brand{font-size:11px;letter-spacing:.17em}.nav-links{gap:30px;font-size:11px;letter-spacing:.12em}.nav-links a{opacity:.62;transition:opacity .25s,color .25s,background .25s}.nav-links a.active,.nav-links a:hover{opacity:1;color:var(--forest)}
+.eyebrow{font-size:11px;letter-spacing:.15em}.caption{font-size:10px}.cover{padding-top:125px}.cover-lede{font-size:16px}.cover-meta{font-size:10px}.cover-kicker{font-size:11px}.cover-note,.cover-number,.cover-scroll{font-size:10px}.cover-art .hero-main{width:62%;height:84%;right:7%;}.cover-art .hero-side{width:34%;height:46%;left:2%;border-width:7px}
+.craft{padding-top:10vh}.craft-header{margin-bottom:55px}.craft-tags span{font-size:10px}.story-kicker{margin-bottom:30px}.story-kicker h3{font-size:clamp(46px,5.2vw,82px)}.story-kicker span{font-size:10px;max-width:360px}.material-grid{grid-template-rows:390px 390px;gap:20px}.material-card figcaption,.hand-card figcaption{padding:12px 14px}.material-card figcaption b,.hand-card figcaption b{font-size:25px}.material-card figcaption span,.hand-card figcaption span{font-size:10px}.material-card.model img{object-position:center}.material-note p,.hand-intro p{font-size:15px}.hand-story-new{margin-top:120px}.hand-intro{max-width:620px;margin:0 0 28px auto;font-size:15px;line-height:1.8}.hand-steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:30px 0 22px}.hand-steps div{padding:16px 14px;display:flex;align-items:baseline;gap:12px;border-right:1px solid var(--line)}.hand-steps div:last-child{border-right:0}.hand-steps b{font:500 13px var(--mono)}.hand-steps span{font:500 13px var(--mono);letter-spacing:.08em;text-transform:uppercase}.hand-grid{grid-template-columns:1fr 1fr;gap:20px}.hand-card,.hand-card.tall,.hand-card.final,.hand-card:not(.tall){height:540px}.hand-card img{object-position:center}.hand-card:nth-child(1) img{object-position:center 40%}.hand-card:nth-child(4) img{object-position:center 45%}
+.archive{padding-top:11vh}.archive-head{margin-bottom:48px}.archive-head p{font-size:15px}.garment-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;align-items:start}.garment-column{display:flex;flex-direction:column;gap:26px}.garment-column:nth-child(2){padding-top:95px}.garment-column:nth-child(3){padding-top:25px}.garment{height:auto!important;margin:0!important;aspect-ratio:4/5;isolation:isolate;border:1px solid rgba(24,35,30,.08);transition:transform .6s cubic-bezier(.16,1,.3,1),box-shadow .6s,border-color .3s}.garment:hover{transform:translateY(-8px);border-color:var(--accent);box-shadow:0 24px 60px rgba(24,35,30,.12)}.garment:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 42%,color-mix(in srgb,var(--accent) 18%,transparent));opacity:0;transition:opacity .45s;pointer-events:none;mix-blend-mode:multiply}.garment:hover:after{opacity:1}.garment-info{left:18px;right:18px;bottom:18px}.garment-info b{font-size:29px}.garment-info span{font-size:10px}.garment-duo{position:absolute;inset:0;overflow:hidden}.garment-duo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .6s,transform .9s cubic-bezier(.16,1,.3,1)}.garment-duo img+img{opacity:0}.garment:hover .garment-duo img:first-child{transform:scale(1.035)}.garment-duo.turned img:first-child{opacity:0}.garment-duo.turned img+img{opacity:1;transform:scale(1.035)}.duo-hint{position:absolute;top:15px;right:15px;padding:9px 11px;background:rgba(251,248,241,.9);font:10px var(--mono);letter-spacing:.08em;text-transform:uppercase;z-index:3}.archive-note{font-size:10px}
+.process{padding-top:11vh}.process-head{margin-bottom:55px}.process-head p,.brand-head p{font-size:15px}.process-label{font-size:10px}.process-caption span{font-size:10px}.process-caption p{font-size:15px}
+.brand{padding-top:11vh}.brand-web{margin-top:24px}.web-main{height:560px}.web-side figcaption,.web-main figcaption{font-size:10px}.brand-text .small{font-size:10px}.brand-text p{font-size:15px}
+.future{padding-top:11vh}.future-grid{gap:8vw}.future-left{position:relative}.future-left h2{margin-top:18px}.future-thread-label{margin-top:45px;font:11px var(--mono);letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}.future-card{margin-top:32px}.future-card span{font-size:10px}.future-card strong{font-size:29px;line-height:1.12}.future-mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:42px}.future-mini-grid div{position:relative;overflow:hidden;aspect-ratio:1/1;background:#e9e1d4}.future-mini-grid img{width:100%;height:100%;object-fit:cover;transition:transform .8s}.future-mini-grid div:hover img{transform:scale(1.06)}.future-mini-grid span{position:absolute;left:9px;bottom:9px;background:rgba(251,248,241,.92);padding:7px 8px;font:9px var(--mono);letter-spacing:.08em;text-transform:uppercase}.footer{font-size:10px;margin-top:90px}
+.cursor-pop{position:fixed;left:0;top:0;width:18px;height:18px;border-radius:50%;background:var(--active-accent,var(--rose));mix-blend-mode:multiply;z-index:120;pointer-events:none;opacity:0;transform:translate3d(-100px,-100px,0);transition:opacity .25s,background .25s,transform .08s}.cursor-pop.show{opacity:.72}.floating-thread{position:fixed;left:-10vw;bottom:7vh;width:65vw;height:auto;z-index:20;pointer-events:none;opacity:.34;transform:translate(calc(var(--tx,50%) * .02),calc(var(--ty,50%) * .02)) rotate(-4deg)}.floating-thread path{fill:none;stroke:var(--active-accent,var(--rose));stroke-width:2;stroke-linecap:round;stroke-dasharray:5 12;animation:threadFlow 8s linear infinite}.floating-thread:after{content:""}@keyframes threadFlow{to{stroke-dashoffset:-160}}
+@media(max-width:900px){.nav-links{font-size:9px;gap:15px}.hand-intro{margin-left:0}.hand-steps{grid-template-columns:1fr 1fr}.hand-steps div:nth-child(2){border-right:0}.hand-steps div{border-bottom:1px solid var(--line)}.garment-grid{grid-template-columns:1fr 1fr}.garment-column:nth-child(n){padding-top:0}.future-mini-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.nav{height:68px;padding:0 16px}.nav-brand{font-size:9px}.nav-links{gap:10px;font-size:8px}.nav-links a:nth-child(n+4){display:none}.hand-steps{grid-template-columns:1fr}.hand-steps div{border-right:0!important}.hand-card,.hand-card.tall,.hand-card.final,.hand-card:not(.tall){height:420px}.garment-grid{grid-template-columns:1fr}.garment-column:nth-child(n){padding-top:0}.garment-info b{font-size:26px}.future-mini-grid{grid-template-columns:1fr 1fr}.floating-thread{width:100vw;bottom:4vh}.future-card strong{font-size:25px}}
+
+/* V6 visual reset: fewer garments, stronger colour, tighter rhythm */
+.nav-links{gap:30px;font-size:11px;letter-spacing:.16em}.nav-brand{font-size:11px}.nav-links a{opacity:.68;transition:color .25s,opacity .25s,transform .25s}.nav-links a:hover,.nav-links a.active{opacity:1;color:var(--forest);transform:translateY(-1px)}
+.archive{position:relative;overflow:hidden;background:#f6eee1}.archive:before,.archive:after{content:"";position:absolute;width:340px;height:340px;border-radius:50%;filter:blur(55px);opacity:.22;pointer-events:none}.archive:before{background:#e7a0a0;left:-170px;top:18%;}.archive:after{background:#87a9c3;right:-180px;bottom:8%}.archive .wrap{position:relative;z-index:2}
+.archive-head{margin-bottom:42px}.archive-head p{font-size:15px}.garment-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:start}.garment-column{display:flex;flex-direction:column;gap:22px}.garment-column:nth-child(n){padding-top:0}.garment{height:auto!important;aspect-ratio:auto;border:1px solid rgba(24,35,30,.12);background:#e7e0d5;transition:transform .65s cubic-bezier(.16,1,.3,1),box-shadow .45s,border-color .3s;--mx:50%;--my:50%}.garment:nth-child(1){aspect-ratio:4/5}.garment:nth-child(2){aspect-ratio:5/6}.garment:nth-child(3){aspect-ratio:4/5}.garment img{height:100%;width:100%;object-fit:cover;transition:transform 1s cubic-bezier(.16,1,.3,1),filter .45s}.garment:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at var(--mx) var(--my),color-mix(in srgb,var(--accent) 72%,transparent) 0%,color-mix(in srgb,var(--accent) 24%,transparent) 18%,transparent 48%);mix-blend-mode:screen;opacity:0;transition:opacity .35s;z-index:1;pointer-events:none}.garment:after{content:"";position:absolute;left:0;top:0;width:100%;height:5px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.16,1,.3,1);z-index:4}.garment:hover{transform:translateY(-10px) rotate(-.3deg);border-color:var(--accent);box-shadow:0 28px 70px rgba(24,35,30,.17)}.garment:hover:before{opacity:.48}.garment:hover:after{transform:scaleX(1)}.garment:hover img{transform:scale(1.055);filter:saturate(1.15) contrast(1.02)}.garment-info{z-index:5;left:16px;right:16px;bottom:16px}.garment-info b{font-size:31px;line-height:1;text-shadow:0 2px 18px rgba(0,0,0,.42)}.garment-info span{font-size:10px}.garment-info b:after{content:"";display:block;width:36px;height:2px;background:var(--accent);margin-top:8px;transition:width .35s}.garment:hover .garment-info b:after{width:72px}.archive-note{margin-top:34px;font-size:10px}.archive-note span:first-child{color:var(--forest)}
+.cursor-pop{width:30px;height:30px;border:2px solid var(--active-accent,var(--rose));background:transparent;mix-blend-mode:normal;box-shadow:0 0 0 6px color-mix(in srgb,var(--active-accent,var(--rose)) 16%,transparent),0 0 25px color-mix(in srgb,var(--active-accent,var(--rose)) 35%,transparent);transition:opacity .2s,border-color .25s,box-shadow .25s,transform .06s;z-index:200}.cursor-pop.show{opacity:1}.floating-thread{opacity:.5;stroke-width:3}.floating-thread path{stroke:var(--active-accent,var(--rose));stroke-width:3;stroke-dasharray:1 13;animation:threadFlow 4.5s linear infinite}
+/* bright accent chips throughout the portfolio */
+.eyebrow:before{content:"";display:inline-block;width:22px;height:4px;background:var(--rose);margin:0 10px 2px 0;border-radius:5px}.craft-tags span:nth-child(2){border-color:#6e99ae}.craft-tags span:nth-child(3){border-color:#c88986}.craft-tags span:nth-child(4){border-color:#b9823c}.process{position:relative;overflow:hidden}.process:before{content:"";position:absolute;right:-120px;top:12%;width:280px;height:280px;border-radius:50%;background:#e4a49d;filter:blur(65px);opacity:.25;pointer-events:none}.brand{position:relative;overflow:hidden}.brand:before{content:"";position:absolute;left:-100px;bottom:18%;width:300px;height:300px;border-radius:50%;background:#8aa7b8;filter:blur(65px);opacity:.18;pointer-events:none}.future{position:relative;overflow:hidden}.future:before{content:"";position:absolute;right:-120px;top:20%;width:320px;height:320px;border-radius:50%;background:#d49a68;filter:blur(75px);opacity:.18;pointer-events:none}
+.brandboard{width:68%;margin:0 auto;background:#f7efe3;padding:7px;border:1px solid rgba(248,241,230,.2);box-shadow:0 24px 70px rgba(0,0,0,.16)}.brandboard img{width:100%;height:auto}.brandboard-note{width:68%;margin:16px auto 0;display:flex;justify-content:space-between;gap:20px;color:rgba(248,241,230,.55);font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase}.brand-web{display:none}.brand-text{padding-top:90px}.brand-head{margin-bottom:50px}
+@media(max-width:900px){.nav-links{font-size:10px;gap:15px}.garment-grid{grid-template-columns:1fr 1fr}.brandboard{width:100%}}
+@media(max-width:600px){.nav-brand{font-size:9px}.nav-links{font-size:8px;gap:9px}.garment-grid{grid-template-columns:1fr}.garment-info b{font-size:27px}}
+
+/* V7: intentional six-card rhythm + local animated thread */
+.archive{position:relative;overflow:hidden}
+.archive .wrap{position:relative;z-index:3}
+.garment-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;align-items:start}
+.garment-column{gap:28px!important;padding-top:0!important}
+.garment{aspect-ratio:4/5!important}
+.garment-column:nth-child(2) .garment:first-child{margin-top:68px!important}
+.garment-column:nth-child(3) .garment:first-child{margin-top:0!important}
+.garment-column:nth-child(1) .garment:nth-child(2){margin-top:0!important}
+.garment-column:nth-child(2) .garment:nth-child(2){margin-top:0!important}
+.garment-column:nth-child(3) .garment:nth-child(2){margin-top:0!important}
+.archive-thread{position:absolute;z-index:1;left:2%;right:2%;bottom:3.5%;height:190px;pointer-events:none;opacity:0;transition:opacity .35s ease;overflow:visible}
+.archive-thread.live{opacity:.72}
+.archive-thread svg{width:100%;height:100%;overflow:visible}
+.archive-thread path{fill:none;stroke:var(--thread-colour,#d08a22);stroke-width:3;stroke-linecap:round;stroke-dasharray:1 15;filter:drop-shadow(0 0 5px color-mix(in srgb,var(--thread-colour,#d08a22) 30%,transparent));animation:archiveThreadFlow 3.8s linear infinite}
+@keyframes archiveThreadFlow{to{stroke-dashoffset:-180}}
+.cursor-pop{width:28px;height:28px;border:2px solid var(--active-accent,#d08a22);background:transparent;box-shadow:0 0 0 7px color-mix(in srgb,var(--active-accent,#d08a22) 18%,transparent),0 0 30px color-mix(in srgb,var(--active-accent,#d08a22) 42%,transparent)}
+@media(max-width:900px){.garment-grid{grid-template-columns:1fr 1fr;gap:20px}.garment-column:nth-child(2) .garment:first-child{margin-top:0!important}.archive-thread{display:none}}
+@media(max-width:600px){.garment-grid{grid-template-columns:1fr}.garment-column:nth-child(2) .garment:first-child{margin-top:0!important}}
+
+/* V10 — living colour + textile interaction */
+:root{--active-accent:#c78c35;--cursor-x:50vw;--cursor-y:50vh}
+html{scroll-behavior:auto}
+body{cursor:default}
+.colour-wash{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(360px circle at var(--cursor-x) var(--cursor-y),color-mix(in srgb,var(--active-accent) 22%,transparent),transparent 70%);opacity:.9;mix-blend-mode:multiply;transition:background .6s ease,opacity .5s ease}
+.global-thread{position:fixed;inset:0;z-index:2;pointer-events:none;overflow:hidden;opacity:.46;mix-blend-mode:multiply}
+.global-thread svg{width:100%;height:100%;overflow:visible}
+.global-thread path{fill:none;stroke:var(--active-accent);stroke-width:2.2;stroke-linecap:round;stroke-dasharray:1 14;filter:drop-shadow(0 0 4px color-mix(in srgb,var(--active-accent) 28%,transparent));stroke-dashoffset:0;transition:stroke .5s ease,stroke-width .4s ease}
+.global-thread.live path{animation:threadDrift 3.2s linear infinite}
+@keyframes threadDrift{to{stroke-dashoffset:-180}}
+.nav,.cover,.intro,.craft,.archive,.process,.brand,.future{position:relative}
+.nav{position:fixed!important;top:0!important;left:0!important;right:0!important;z-index:110!important;}
+.nav{z-index:90;transition:background .5s ease}
+.nav-links a{position:relative;transition:color .45s ease,opacity .3s ease,transform .35s cubic-bezier(.16,1,.3,1)}
+.nav-links a:after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:2px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.16,1,.3,1)}
+.nav-links a:hover:after,.nav-links a.active:after{transform:scaleX(1)}
+.nav-links a:hover{color:var(--nav-accent,var(--forest));transform:translateY(-2px)}
+.nav-brand{transition:color .45s ease}
+.cover-copy,.cover-art,.cover-scroll{position:relative;z-index:4}
+.cover-art .hero-main,.cover-art .hero-side{will-change:transform;transition:transform 1s cubic-bezier(.16,1,.3,1),box-shadow .7s ease}
+.hero-interactive{--hero-accent:var(--active-accent)}
+.hero-interactive:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),color-mix(in srgb,var(--hero-accent) 25%,transparent),transparent 45%);mix-blend-mode:screen;opacity:0;transition:opacity .45s ease}
+.hero-interactive:hover:after{opacity:.65}
+.hero-interactive img{transition:transform 1.1s cubic-bezier(.16,1,.3,1),filter .7s ease}
+.hero-interactive:hover img{transform:scale(1.035);filter:saturate(1.08)}
+.cover-kicker:after{transition:width .6s cubic-bezier(.16,1,.3,1),background .45s ease}
+.cover:hover .cover-kicker:after{width:120px;background:var(--active-accent)}
+.cover h1{transition:letter-spacing .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+.cover:hover h1{letter-spacing:-.045em;transform:translateX(4px)}
+.cover-lede,.cover-meta{transition:transform .8s cubic-bezier(.16,1,.3,1)}
+.cover:hover .cover-lede{transform:translateX(5px)}
+.cover:hover .cover-meta{transform:translateX(8px)}
+.interactive{position:relative;--mx:50%;--my:50%;--accent:#c78c35;overflow:hidden}
+.interactive:before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(300px circle at var(--mx) var(--my),color-mix(in srgb,var(--accent) 22%,transparent),transparent 68%);mix-blend-mode:screen;opacity:0;transition:opacity .45s ease}
+.interactive:after{content:"";position:absolute;left:0;top:0;width:100%;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .6s cubic-bezier(.16,1,.3,1);z-index:5}
+.interactive:hover:before{opacity:.7}.interactive:hover:after{transform:scaleX(1)}
+.material-card img,.hand-card img,.process-board img,.brandboard img{transition:transform 1.1s cubic-bezier(.16,1,.3,1),filter .6s ease}
+.material-card:hover img,.hand-card:hover img,.process-board:hover img,.brandboard:hover img{transform:scale(1.035);filter:saturate(1.07)}
+.material-card figcaption,.hand-card figcaption{transition:transform .5s cubic-bezier(.16,1,.3,1),box-shadow .4s ease}
+.material-card:hover figcaption,.hand-card:hover figcaption{transform:translateY(-5px);box-shadow:0 10px 30px rgba(24,35,30,.12)}
+.eyebrow{transition:color .4s ease}.eyebrow:before{transition:background .4s ease,width .4s ease}.eyebrow:hover{color:var(--active-accent)}
+.craft-tags span{transition:border-color .4s ease,background .4s ease,transform .4s ease}.craft-tags span:hover{border-color:var(--active-accent);background:color-mix(in srgb,var(--active-accent) 10%,transparent);transform:translateY(-3px)}
+.garment{--accent:#c78c35}
+.archive .garment:hover{transform:translateY(-12px) rotate(-.25deg) scale(1.01)}
+.process-board{transition:transform .7s cubic-bezier(.16,1,.3,1),box-shadow .6s ease}.process-board:hover{transform:translateY(-7px);box-shadow:0 26px 60px rgba(24,35,30,.12)}
+.brandboard{transition:transform .8s cubic-bezier(.16,1,.3,1),box-shadow .7s ease}.brandboard:hover{transform:translateY(-8px) rotate(.15deg);box-shadow:0 34px 90px rgba(24,35,30,.18)}
+.future-mini-grid div{transition:transform .6s cubic-bezier(.16,1,.3,1),box-shadow .5s ease}.future-mini-grid div:hover{transform:translateY(-7px);box-shadow:0 18px 40px rgba(24,35,30,.12)}
+.cursor-pop{z-index:120;transition:opacity .25s,transform .08s,border-color .4s,box-shadow .4s}
+/* section colour moments */
+.intro .intro-copy p,.intro .signature{transition:color .5s ease}.intro:hover .intro-copy p{color:rgba(249,243,232,.9)}
+.archive .archive-head h2 em{transition:color .5s ease}.archive:hover .archive-head h2 em{color:var(--active-accent)}
+/* smooth reveal choreography */
+.reveal{opacity:0;transform:translateY(35px);transition:opacity 1s cubic-bezier(.16,1,.3,1),transform 1.15s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+.delay1{transition-delay:.12s}.delay2{transition-delay:.22s}
+@media(max-width:900px){.global-thread{opacity:.22}.colour-wash{opacity:.45}.nav-links a:after{bottom:-4px}}
+@media(max-width:600px){.global-thread{display:none}.colour-wash{opacity:.25}.cover:hover h1{letter-spacing:-.06em;transform:none}}
+
+
+/* V11 — colour-led editorial interaction */
+html{scroll-behavior:auto}
+:root{--active-accent:#d08a22}
+.colour-wash{z-index:0;opacity:.38;background:radial-gradient(520px circle at var(--cursor-x,50vw) var(--cursor-y,50vh),color-mix(in srgb,var(--active-accent) 11%,transparent),transparent 72%);transition:background .55s ease,opacity .35s ease}
+.nav{background:rgba(245,239,228,.88)!important;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(24,35,30,.06)}
+.nav-brand:hover{color:var(--nav-accent,var(--forest))}
+.nav-links a{--link-accent:var(--nav-accent,var(--forest));color:#25302b;transition:color .38s ease,opacity .3s ease,transform .35s cubic-bezier(.16,1,.3,1)}
+.nav-links a:hover,.nav-links a.active{color:var(--link-accent)!important}
+.nav-links a:after{background:var(--link-accent)!important;height:3px}
+.interactive,.garment,.hero-interactive{--mx:50%;--my:50%;transition:border-color .35s ease,box-shadow .5s ease,transform .7s cubic-bezier(.16,1,.3,1)}
+.interactive:before,.garment:before,.hero-interactive:after{background:radial-gradient(360px circle at var(--mx,50%) var(--my,50%),color-mix(in srgb,var(--accent,var(--active-accent)) 24%,transparent),transparent 66%)!important;opacity:0;transition:opacity .42s ease}
+.interactive:hover:before,.garment:hover:before,.hero-interactive:hover:after{opacity:.9}
+.interactive:after{height:4px;background:var(--accent,var(--active-accent));box-shadow:0 0 18px color-mix(in srgb,var(--accent,var(--active-accent)) 30%,transparent)}
+.interactive:hover,.garment:hover{border-color:var(--accent,var(--active-accent))}
+.material-card:hover img,.hand-card:hover img,.process-board:hover img,.brandboard:hover img,.garment:hover img{filter:saturate(1.16) contrast(1.02);transform:scale(1.04)}
+.hero-interactive{overflow:hidden;isolation:isolate}
+.hero-interactive img{transition:transform 1.1s cubic-bezier(.16,1,.3,1),filter .6s ease}
+.hero-interactive:hover img{transform:scale(1.035);filter:saturate(1.16) contrast(1.03)}
+.cover-art .hero-main{--accent:#d08a22}.cover-art .hero-side{--accent:#8a9f5a}
+.cover-art .hero-main:after,.cover-art .hero-side:after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(280px circle at var(--mx,50%) var(--my,50%),color-mix(in srgb,var(--accent) 25%,transparent),transparent 65%);opacity:0;transition:opacity .45s ease}
+.cover-art .hero-main:hover:after,.cover-art .hero-side:hover:after{opacity:1}
+.craft-tags span,.future-card,.archive-note{transition:border-color .35s ease,color .35s ease,transform .35s ease,background .35s ease}
+.craft-tags span:hover{color:var(--active-accent);border-color:var(--active-accent);background:color-mix(in srgb,var(--active-accent) 9%,transparent)}
+/* no cursor-following thread: threads live only in their intended section, never across photographs */
+.global-thread{display:none!important}
+.archive-thread{pointer-events:none;opacity:.34}
+.archive-thread path{stroke:var(--active-accent);transition:stroke .5s ease}
+@media(max-width:600px){.colour-wash{opacity:.2}.archive-thread{display:none!important}}
+
+/* V12 — visible colour interaction, no cursor-thread */
+.global-thread,.floating-thread{display:none!important}
+.colour-wash{z-index:1!important;opacity:1!important;pointer-events:none}
+.cursor-pop{position:fixed;left:0;top:0;display:block!important;opacity:0;pointer-events:none;z-index:200;transform:translate3d(-50%,-50%,0);transition:opacity .2s ease,border-color .35s ease,box-shadow .35s ease}
+.cursor-pop.show{opacity:1}
+[data-accent]{--accent:#c78c35}
+.garment,.material-card,.hand-card,.process-board,.brandboard,.hero-interactive{transition:border-color .35s ease,box-shadow .5s ease,transform .7s cubic-bezier(.16,1,.3,1)}
+.garment:hover,.material-card:hover,.hand-card:hover,.process-board:hover,.brandboard:hover{border-color:var(--accent)!important;box-shadow:0 20px 55px color-mix(in srgb,var(--accent) 16%,transparent)!important}
+.garment:hover:before,.material-card:hover:before,.hand-card:hover:before,.process-board:hover:before,.brandboard:hover:before{opacity:1!important}
+.cover-art .hero-interactive:hover{box-shadow:0 24px 70px color-mix(in srgb,var(--accent) 18%,transparent)}
+.craft-tags span:hover{color:var(--active-accent);border-color:var(--active-accent);box-shadow:0 8px 25px color-mix(in srgb,var(--active-accent) 13%,transparent)}
+.nav-links a:hover,.nav-links a.active{color:var(--nav-accent,var(--forest))!important}
+.nav-brand:hover{color:var(--active-accent)}
+
+/* V13: compact cursor — visible, but never distracting */
+.cursor-pop{width:12px!important;height:12px!important;border:1.5px solid var(--active-accent,#c78c35)!important;background:color-mix(in srgb,var(--active-accent,#c78c35) 10%,transparent)!important;box-shadow:0 0 0 3px color-mix(in srgb,var(--active-accent,#c78c35) 12%,transparent)!important;}
+.cursor-pop.show{opacity:.92!important}
+
+
+/* V16 mobile portrait pass — keeps the desktop composition intact */
+@media (max-width: 600px){
+  html,body{overflow-x:hidden}
+  .nav{height:68px!important;padding:8px 12px!important;align-items:center;gap:8px}
+.nav-brand{
+  font-size:6.7px!important;
+  letter-spacing:.095em!important;
+  white-space:nowrap;
+  flex:0 0 126px;
+  overflow:visible;
+}
+
+.nav-brand:after{
+  content:none!important;
+  display:none!important;
+}
+
+.nav-links{
+  min-width:0;
+  flex:1 1 auto;
+  overflow-x:auto;
+  overflow-y:hidden;
+  justify-content:flex-start;
+  gap:10px!important;
+  font-size:6.7px!important;
+  letter-spacing:.075em!important;
+  white-space:nowrap;
+  padding:4px 0;
+}
+  .nav-links a{flex:0 0 auto}
+  .cover{min-height:auto!important;padding:108px 6vw 55px!important;display:block!important}
+  .cover-copy{padding:0!important}
+  .cover-kicker{margin-bottom:20px;gap:10px;font-size:9px!important;letter-spacing:.11em}
+  .cover-kicker:after{width:42px}
+  .cover h1{font-size:22vw!important;line-height:.78!important;letter-spacing:-.065em}
+  .cover h1 em{margin-left:.75em}
+  .cover-lede{max-width:100%;margin:30px 0 0!important;font-size:13px;line-height:1.7}
+  .cover-meta{margin:22px 0 0!important;gap:12px;font-size:7px;flex-wrap:wrap}
+  .cover-art{height:72vw!important;min-height:285px!important;max-height:390px;margin-top:38px!important}
+  .cover-art .hero-main{width:68%!important;height:82%!important;right:0!important;top:0!important}
+  .cover-art .hero-side{width:39%!important;height:48%!important;left:0!important;bottom:0!important;border-width:5px!important}
+  .cover-number{left:0;bottom:-25px;font-size:7px}
+  .cover-scroll{display:none}
+  .intro,.craft,.archive,.process,.brand,.future{padding-top:78px!important;padding-bottom:78px!important}
+  .wrap{width:88vw!important}
+  .intro-grid,.craft-header,.process-head,.brand-head,.brand-text,.future-grid{gap:30px!important}
+  .intro h2,.craft-header h2,.process-head h2,.brand-head h2{font-size:18vw!important;line-height:.82!important}
+  .intro-copy p,.craft-header-copy,.process-head p,.brand-head p,.brand-text p{font-size:13px!important;line-height:1.75!important}
+  .craft-header{margin-bottom:42px!important}
+  .craft-tags{gap:7px!important;margin-top:20px!important}
+  .craft-tags span{font-size:7px!important;padding:8px 10px!important}
+  .story-kicker{margin-bottom:18px!important;padding-top:13px!important}
+  .story-kicker h3{font-size:12vw!important}
+  .story-kicker span{font-size:7px!important;max-width:150px}
+  .material-grid{grid-template-columns:1fr!important;grid-template-rows:none!important;gap:12px!important}
+  .material-card,.material-card.result{grid-row:auto!important;height:64vw!important;min-height:250px;max-height:430px}
+  .material-card figcaption,.hand-card figcaption{left:10px;bottom:10px;padding:8px 9px}
+  .material-card figcaption b,.hand-card figcaption b{font-size:17px!important}
+  .material-card figcaption span,.hand-card figcaption span{font-size:7px!important}
+  .material-note{grid-template-columns:1fr!important;gap:18px!important;padding:35px 0 55px!important}
+  .material-note h4{font-size:11vw!important}
+  .material-note p{font-size:12px!important;line-height:1.75!important}
+  .hand-story{grid-template-columns:1fr!important;gap:30px!important}
+  .hand-copy{position:static!important}
+  .hand-copy h3{font-size:13vw!important}
+  .hand-copy p{font-size:12px!important}
+  .hand-steps{grid-template-columns:1fr!important;margin:24px 0 18px!important}
+  .hand-steps div{padding:12px 10px!important;border-right:0!important}
+  .hand-steps div:last-child{border-bottom:0}
+  .hand-steps b,.hand-steps span{font-size:10px!important}
+  .hand-grid{grid-template-columns:1fr!important;gap:12px!important}
+  .hand-card,.hand-card.tall,.hand-card.final,.hand-card:not(.tall){height:68vw!important;min-height:260px;max-height:430px}
+  .hand-card.final{grid-column:auto!important}
+  .archive{padding-top:78px!important}
+  .archive-head{display:block!important;margin-bottom:38px!important}
+  .archive-head h2{font-size:18vw!important;line-height:.8!important}
+  .archive-head p{max-width:100%;font-size:12px!important;line-height:1.75!important;margin-top:25px!important}
+  .archive-ai-note{max-width:100%;font-size:7px!important;line-height:1.7!important;margin-top:16px!important;padding-left:10px}
+  .garment-grid{grid-template-columns:1fr!important;gap:18px!important}
+  .garment-column{gap:18px!important;padding-top:0!important}
+  .garment{aspect-ratio:4/5!important;height:auto!important;margin:0!important}
+  .garment-info{left:13px!important;right:13px!important;bottom:13px!important}
+  .garment-info b{font-size:25px!important}
+  .garment-info span{font-size:8px!important}
+  .archive-note{display:block!important;font-size:8px!important;line-height:1.7}
+  .archive-note span{display:block;margin-top:8px}
+  .process-head{margin-bottom:40px!important}
+  .process-layout{grid-template-columns:1fr!important;gap:12px!important}
+  .process-board.large{height:78vw!important;min-height:280px;max-height:480px}
+  .process-board.small{height:58vw!important;min-height:220px;max-height:350px}
+  .process-caption{grid-template-columns:1fr!important;gap:9px!important;margin-top:18px}
+  .process-caption p{font-size:12px!important;line-height:1.7!important}
+  .brand-head{margin-bottom:42px!important}
+  .brand-web{grid-template-columns:1fr!important;gap:12px!important}
+  .web-main{height:76vw!important;min-height:280px;max-height:430px}
+  .web-side{height:auto!important;display:grid;grid-template-rows:58vw 58vw!important;gap:12px!important}
+  .brandboard{padding:6px!important}
+  .brandboard-note{width:100%!important;font-size:7px!important;line-height:1.6;flex-wrap:wrap}
+  .brand-text{padding:72px 0!important}
+  .future-grid{grid-template-columns:1fr!important}
+  .future-card strong{font-size:25px!important}
+  .future-mini-grid{grid-template-columns:1fr 1fr!important;gap:9px!important}
+  .future-mini-grid span{font-size:7px!important}
+  .footer{font-size:8px!important;margin-top:55px!important}
+  .floating-thread{display:none!important}
+}
+
+@media (max-width: 420px){
+ .nav-brand{
+  font-size:6.5px!important;
+  flex-basis:122px!important;
+}
+  .nav-links{font-size:6.5px!important;gap:11px!important}
+  .cover{padding-top:112px!important}
+  .cover h1{font-size:23vw!important}
+  .cover-lede{font-size:12px!important}
+  .cover-art{height:76vw!important;min-height:270px!important}
+  .intro h2,.craft-header h2,.process-head h2,.brand-head h2{font-size:19vw!important}
+  .archive-head h2{font-size:19vw!important}
+  .garment-info b{font-size:23px!important}
+  .future-mini-grid{grid-template-columns:1fr 1fr!important}
+}
+
+/* MOBILE NAV FIX — keep all four sections accessible */
+@media (max-width: 600px){
+  .nav-links a:nth-child(n+4){display:block!important;}
+  .nav-links{overflow-x:auto!important;overflow-y:hidden!important;flex:1 1 auto!important;min-width:0!important;justify-content:flex-start!important;white-space:nowrap!important;}
+}
+
+@media (hover:none){
+  .garment:hover,.material-card:hover,.hand-card:hover,.process-board:hover,.brandboard:hover{transform:none!important;box-shadow:none!important}
+  .garment:hover img,.material-card:hover img,.hand-card:hover img,.process-board:hover img,.brandboard:hover img{transform:none!important;filter:none!important}
+  .garment:hover:before,.garment:hover:after,.material-card:hover:before,.hand-card:hover:before{opacity:0!important}
+}
+
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<div class="colour-wash" aria-hidden="true"></div>
+<div class="progress"><i id="progress"></i></div>
+<header class="nav"><a class="nav-brand" href="#top">SIYA KHANNA / FASHION PORTFOLIO</a><nav class="nav-links"><a href="#craft" data-accent="#c78c35">01 Craft</a><a href="#archive" data-accent="#c76f7a">02 Garments</a><a href="#process" data-accent="#5d86a8">03 Process</a><a href="#brand" data-accent="#3f7c62">04 Tangy Stitch</a></nav></header>
+<main id="top">
+<section class="cover">
+  <div class="cover-copy reveal in">
+    <div class="cover-kicker eyebrow">Fashion / material / making / brand</div>
+    <h1>Siya<br><em>Khanna.</em></h1>
+    <p class="cover-lede">A fashion portfolio built around the things I keep coming back to: cloth, handwork, proportion, detail and the process of turning an idea into something that can actually be worn.</p>
+    <div class="cover-meta"><span>New Delhi / India</span><span>2026</span></div>
+  </div>
+  <div class="cover-art reveal delay1">
+    <div class="hero-main hero-interactive" data-accent="#d08a22"><img src="assets/garments/14_safed_sukun.png" alt="White textured two-piece set styled on a bright botanical flatlay"/></div>
+    <div class="hero-side hero-interactive" data-accent="#8a9f5a"><img src="assets/garments/13_gul_ghaas.png" alt="Botanical printed two-piece garment study"/></div>
+    <div class="cover-note">made slowly / considered closely</div><div class="cover-number">00 — BEGIN HERE</div>
+  </div>
+  <div class="cover-scroll">scroll ↓</div>
+</section>
+
+<section class="intro"><div class="wrap"><div class="intro-grid"><h2 class="reveal">I started<br>with the <em>surface.</em></h2><div class="intro-copy reveal delay1"><p>My strongest fashion work begins before the final garment. I look at what a fabric can hold, what a botanical mark can become, how a line changes when it is stitched, and how a small detail can give a piece its identity.</p><div class="signature">This portfolio puts the making first.<br>Technology comes later, when it gives the work another way to be understood.</div></div></div></div></section>
+
+<section class="craft" id="craft"><div class="wrap">
+  <div class="craft-header reveal"><div><div class="eyebrow">01 / material + handwork</div><h2>Surface,<br>stitch & <em>trace.</em></h2></div><div class="craft-header-copy"><p><strong>Two things keep returning in my work: what nature leaves on cloth, and what the hand leaves behind.</strong> Eco-printing gives me marks I cannot completely control. Hand embroidery lets me build a mark slowly, stitch by stitch. I wanted both processes to be seen as design work, not decoration added at the end.</p><div class="craft-tags"><span>Eco-printing</span><span>Botanical transfer</span><span>Hand embroidery</span><span>Motif development</span></div></div></div>
+
+  <div class="craft-story reveal">
+    <div class="story-kicker"><h3>What the plant leaves<br><em>behind.</em></h3><span>Eco-printing / botanical transfer / from arrangement to garment</span></div>
+    <div class="material-grid">
+      <figure class="material-card interactive" data-accent="#8a9f5a"><img src="assets/craft/ecoprint_botanical.jpg" alt="Leaves and flower petals arranged on cloth before eco-printing"><figcaption><b>01 / Botanical placement</b><span>collect / arrange / prepare</span></figcaption></figure>
+      <figure class="material-card result interactive" data-accent="#c78c35"><img src="assets/craft/ecoprint_soft.jpg" alt="Finished eco-printed textile with botanical impressions"><figcaption><b>02 / Eco-print reveal</b><span>botanical transfer / pigment / cloth</span></figcaption></figure>
+      <figure class="material-card model interactive" data-accent="#5d86a8"><img src="assets/craft/ecoprint_shacket.jpg" alt="Blue shacket with an eco-printed pocket flap"><figcaption><b>03 / Into the garment</b><span>eco-printed flap / finished shacket</span></figcaption></figure>
+    </div>
+    <div class="material-note"><h4>The print is the beginning,<br>not the <em>finish.</em></h4><p>The arrangement of leaves and petals becomes part of the textile before the garment exists. I like that the final surface carries small differences in colour, pressure and shape instead of behaving like a perfectly repeatable print.</p></div>
+  </div>
+
+  <div class="craft-story reveal hand-story-new">
+    <div class="story-kicker"><h3>From a drawn line<br>to a <em>stitch.</em></h3><span>Hand embroidery / motif transfer / stitch planning / finished garment</span></div>
+    <div class="hand-intro"><div class="eyebrow">A motif, becoming a garment</div><p>I wanted to show the handwork as a sequence: the motif is transferred, mapped onto cloth, built with thread and finally read on the garment.</p></div>
+    <div class="hand-steps"><div><b>01</b><span>Motif transfer</span></div><div><b>02</b><span>Motif mapping</span></div><div><b>03</b><span>Hand embroidery</span></div><div><b>04</b><span>Finished garment</span></div></div>
+    <div class="hand-grid">
+      <figure class="hand-card interactive" data-accent="#8b5878"><img src="assets/craft/embroidered_garment.jpg" alt="Motif being transferred onto fabric"><figcaption><b>01 / Motif transfer</b><span>transfer paper / placement / cloth</span></figcaption></figure>
+      <figure class="hand-card interactive" data-accent="#8b5878"><img src="assets/craft/embroidery_finished.jpg" alt="Embroidery motif mapped onto fabric"><figcaption><b>02 / Motif mapping</b><span>drawn line / stitch planning</span></figcaption></figure>
+      <figure class="hand-card interactive" data-accent="#8b5878"><img src="assets/craft/embroidery_hoop.jpg" alt="Botanical motif being hand embroidered in a hoop"><figcaption><b>03 / Hand embroidery</b><span>needle / thread / stitch</span></figcaption></figure>
+      <figure class="hand-card interactive" data-accent="#8b5878"><img src="assets/craft/embroidery_drawing.jpg" alt="Finished garment carrying the embroidered botanical motif"><figcaption><b>04 / Finished garment</b><span>motif translated onto the piece</span></figcaption></figure>
+    </div>
+  </div>
+</div></section>
+
+<section class="archive" id="archive"><div class="wrap">
+  <div class="archive-head reveal"><div><div class="eyebrow">02 / selected garments</div><h2>Things I have<br><em>actually made.</em></h2></div><div><p>A tighter edit. Six garments, chosen because they show different ideas about colour, proportion, surface and wear. Each piece gets its own name.</p><div class="archive-ai-note">Selected garment imagery is AI-assisted visualisation of original garments and designs. Material, craft and process documentation is original work.</div></div></div>
+  <div class="garment-grid">
+    <div class="garment-column">
+      <figure class="garment reveal" data-accent="#d08a22"><img src="assets/garments/03_yellow_top.png" alt="Yellow floral top"><div class="garment-info"><b>Haldi Hawa</b><span>floral top / colour play</span></div></figure>
+      <figure class="garment reveal delay1" data-accent="#d36f73"><img src="assets/garments/05_maroon_set.png" alt="Maroon coordinated shirt and skirt set"><div class="garment-info"><b>Shaam Gulabi</b><span>co-ord / soft structure</span></div></figure>
+    </div>
+    <div class="garment-column">
+      <figure class="garment reveal delay1" data-accent="#5d9fbd"><img src="assets/garments/04_navy_dress.png" alt="Navy blue tailored dress with gold stitch detailing"><div class="garment-info"><b>Neeli Lehar</b><span>dress / drape + movement</span></div></figure>
+      <figure class="garment reveal" data-accent="#5d86a8"><img src="assets/garments/09_white_blue_front.png" alt="White shirt with blue patterned cuffs"><div class="garment-info"><b>Neel Kinar</b><span>shirt / blue embroidery + contrast</span></div></figure>
+    </div>
+    <div class="garment-column">
+      <figure class="garment reveal delay1" data-accent="#8a9f5a"><img src="assets/garments/13_gul_ghaas.png" alt="Botanical printed short set"><div class="garment-info"><b>Gul Ghaas</b><span>botanical / two-piece</span></div></figure>
+      <figure class="garment reveal" data-accent="#8b5878"><img src="assets/garments/11_dhundh.png" alt="Soft grey co-ord with cropped jacket and wide trousers"><div class="garment-info"><b>Dhundh</b><span>co-ord / fluid proportion</span></div></figure>
+    </div>
+  </div>
+  <div class="archive-thread" aria-hidden="true"><svg viewBox="0 0 1200 220" preserveAspectRatio="none"><path id="archiveThreadPath" d="M0 160 C 180 40, 300 245, 480 130 S 760 35, 900 135 S 1060 230, 1200 75"/></svg></div>
+  <div class="archive-note"><span>06 pieces / selected edit</span><span>front + back are shown only when they add something to the story</span></div>
+</div></section>
+
+<section class="process" id="process"><div class="wrap">
+  <div class="process-head reveal"><div><div class="eyebrow">03 / development</div><h2>Idea,<br>pattern, <em>piece.</em></h2></div><p>I do not want the finished garment to be the only evidence of design. The boards, measurements, pattern work and product details show how an idea moves toward something manufacturable and wearable.</p></div>
+  <div class="process-layout">
+    <figure class="process-board large reveal interactive" data-accent="#5d86a8"><img src="assets/process/02_design_board.png" alt="Garment design development board with technical views"><div class="process-label">design development / technical views</div></figure>
+    <div class="process-right">
+      <figure class="process-board small reveal delay1 interactive" data-accent="#c78c35"><img src="assets/process/04_stripe_design.png" alt="Garment development board with stripe and cuff variations"><div class="process-label">detail / variation / finish</div></figure>
+      <figure class="process-board small reveal delay2 interactive" data-accent="#c76f7a"><img src="assets/process/03_asymmetric_shirt.png" alt="Asymmetric shirt design sheet"><div class="process-label">variation / silhouette</div></figure>
+    </div>
+  </div>
+  <div class="process-caption reveal"><span>making decisions</span><p>Fabric is measured, silhouettes are adjusted, details are placed, and the garment is tested against the person who will wear it. I am interested in the point where an aesthetic idea has to become a real product.</p></div>
+  <div class="process-layout" style="margin-top:55px">
+    <figure class="process-board small reveal interactive" data-accent="#8a9f5a"><img src="assets/process/05_fabric_measure.jpg" alt="Fabric being measured during garment development"><div class="process-label">material / measurement</div></figure>
+    <figure class="process-board small reveal delay1 interactive" data-accent="#c78c35"><img src="assets/process/06_pattern.jpg" alt="Pattern piece being measured on fabric"><div class="process-label">pattern / construction</div></figure>
+  </div>
+</div></section>
+
+<section class="brand" id="brand"><div class="wrap">
+  <div class="brand-head reveal"><div><div class="eyebrow">04 / Tangy Stitch</div><h2>A brand I can<br><em>keep building.</em></h2></div><p>Tangy Stitch is where my fashion work becomes larger than an individual garment. I have worked across product, material language, packaging, storytelling and the digital experience, trying to make the brand feel rooted without making it feel stuck in the past.</p></div>
+  <div class="brandboard reveal interactive" data-accent="#3f7c62"><img src="assets/brandboard.png" alt="Tangy Stitch brand identity board showing labels, packaging, garment passport and signature thread"></div><div class="brandboard-note"><span>BRAND SYSTEM / SELECTED DEVELOPMENT</span><span>identity · packaging · garment storytelling · signature thread</span></div>
+  <div class="brand-text reveal"><div class="small">What I want the brand to hold</div><div><h3>Clothes first.<br>Then the <em>story.</em></h3><p>I want Tangy Stitch to grow as a family-run Indian label that treats clothing as something made, worn and lived with. The details matter because they give the product a reason to be remembered.</p></div></div>
+</div></section>
+
+<section class="future"><div class="wrap"><div class="future-grid"><div class="future-left reveal"><div class="eyebrow">05 / what comes next</div><h2>There is more<br>to <em>explore.</em></h2><div class="future-thread-label">fashion / material / technology / business</div></div><div class="future-copy reveal delay1"><p>My background in computer applications gives me another set of tools to bring into fashion. I do not want technology to replace the material work. I want to use it to ask better questions about products, collections, retail and how people experience a brand.</p><div class="future-card"><span>Next direction</span><strong>Fashion × material × technology × business</strong></div><div class="future-card"><span>For MFI</span><strong>I want to learn the fashion system from inside the industry, then build within it.</strong></div><div class="future-mini-grid"><div><img src="assets/craft/ecoprint_shacket.jpg" alt="Eco-printed shacket detail"><span>material systems</span></div><div><img src="assets/process/02_design_board.png" alt="Garment development board"><span>product thinking</span></div><div><img src="assets/brandboard.png" alt="Tangy Stitch brand system"><span>brand building</span></div></div></div></div><div class="footer"><span>Siya Khanna / New Delhi / 2026</span><span>Thank you for looking closely.</span></div></div></section>
+<div class="cursor-pop"></div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+<script>
+const lenis=window.Lenis?new Lenis({duration:1.55,easing:t=>1-Math.pow(1-t,4),smoothWheel:true,smoothTouch:false,lerp:.075,wheelMultiplier:.82}):null;
+function raf(t){if(lenis)lenis.raf(t);requestAnimationFrame(raf)}requestAnimationFrame(raf);
+const progress=document.getElementById('progress'),root=document.documentElement;
+addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h?scrollY/h*100:0)+'%'});
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.12,rootMargin:'0px 0px -4% 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+const pop=document.querySelector('.cursor-pop'), wash=document.querySelector('.colour-wash');
+const colourMap={ochre:'#d08a22',rose:'#d36f73',forest:'#2f7b61',plum:'#8b5878',sky:'#5d9fbd',sage:'#a5b36b',indigo:'#5e7898'};
+let activeColour='#c78c35', targetX=window.innerWidth*.5,targetY=window.innerHeight*.5,curX=targetX,curY=targetY;
+function setColour(c){activeColour=c||'#c78c35';root.style.setProperty('--active-accent',activeColour);root.style.setProperty('--nav-accent',activeColour);}
+if(matchMedia('(pointer:fine)').matches){
+  // The colour system is global: every section/card can tint the cursor and nearby page surface.
+  const sectionColours={
+    top:'#d08a22',craft:'#8b5878',archive:'#5d9fbd',process:'#c78c35',brand:'#2f7b61',future:'#d36f73'
+  };
+  let overAccent=false;
+  addEventListener('pointermove',e=>{
+    targetX=e.clientX; targetY=e.clientY;
+    root.style.setProperty('--cursor-x',targetX+'px');
+    root.style.setProperty('--cursor-y',targetY+'px');
+    if(pop){pop.style.transform=`translate3d(${targetX}px,${targetY}px,0)`;pop.classList.add('show')}
+  },{passive:true});
+
+  // Section-wide colour: even open space inside a chapter has a living accent.
+  document.querySelectorAll('main section').forEach(section=>{
+    const c=section.dataset.accent || sectionColours[section.id] || '#c78c35';
+    section.style.setProperty('--section-accent',c);
+    section.addEventListener('pointerenter',()=>setColour(c));
+  });
+
+  document.querySelectorAll('[data-accent]').forEach(el=>{
+    const c=el.dataset.accent||'#c78c35';
+    el.style.setProperty('--accent',c);
+    el.addEventListener('pointerenter',()=>{setColour(c);overAccent=true;pop?.classList.add('show')});
+    el.addEventListener('pointermove',e=>{
+      const r=el.getBoundingClientRect();
+      el.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');
+      el.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%');
+    });
+    el.addEventListener('pointerleave',()=>{overAccent=false});
+  });
+
+  document.querySelectorAll('.nav-links a').forEach(a=>{
+    a.addEventListener('pointerenter',()=>setColour(a.dataset.accent));
+    a.addEventListener('pointerleave',()=>{const s=document.querySelector('main section:has('+CSS.escape(a.getAttribute('href'))+')'); setColour(a.dataset.accent||'#c78c35')});
+  });
+
+  document.querySelectorAll('.cover-art .hero-interactive').forEach(el=>{
+    el.addEventListener('pointermove',e=>{
+      const r=el.getBoundingClientRect();
+      const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+      el.style.setProperty('--mx',((x+.5)*100)+'%');el.style.setProperty('--my',((y+.5)*100)+'%');
+      el.style.transform=`translate3d(${x*8}px,${y*8}px,0)`;
+    });
+    el.addEventListener('pointerleave',()=>el.style.transform='');
+  });
+
+  // Smooth cursor ring; no thread follows the cursor.
+  const cursorLoop=()=>{
+    curX += (targetX-curX)*.18; curY += (targetY-curY)*.18;
+    if(pop) pop.style.transform=`translate3d(${curX}px,${curY}px,0)`;
+    requestAnimationFrame(cursorLoop);
+  }; requestAnimationFrame(cursorLoop);
+}
+// subtle scroll depth: images move independently, keeping the editorial collage alive
+let lastY=scrollY;addEventListener('scroll',()=>{const y=scrollY;document.querySelectorAll('.cover-art .hero-main').forEach(el=>el.style.transform=`translate3d(0,${Math.max(-18,Math.min(18,(y*.035)))}px,0)`);document.querySelectorAll('.cover-art .hero-side').forEach(el=>el.style.transform=`translate3d(0,${Math.max(-10,Math.min(28,(y*.06)))}px,0)`);lastY=y},{passive:true});
+// active nav state
+const sections=[...document.querySelectorAll('main section[id]')],navs=[...document.querySelectorAll('.nav-links a')];
+const navObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){navs.forEach(a=>a.classList.remove('active'));const a=document.querySelector(`.nav-links a[href="#${e.target.id}"]`);if(a){a.classList.add('active');setColour(a.dataset.accent)}}}),{rootMargin:'-35% 0px -55% 0px'});sections.forEach(s=>navObs.observe(s));
+</script>
+</body></html>
+<style>
+/* V16.1 — mobile navigation: keep all four sections visible */
+@media (max-width: 600px){
+  .nav{
+    height:92px!important;
+    padding:10px 16px 8px!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    justify-content:center!important;
+    gap:8px!important;
+  }
+  .nav-brand{
+    font-size:8px!important;
+    letter-spacing:.13em!important;
+    line-height:1!important;
+    white-space:nowrap!important;
+    flex:none!important;
+  }
+  .nav-links{
+    width:100%!important;
+    min-width:0!important;
+    flex:none!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    gap:0!important;
+    overflow:visible!important;
+    padding:0!important;
+    white-space:nowrap!important;
+    font-size:7.5px!important;
+    letter-spacing:.10em!important;
+  }
+  .nav-links a{
+    flex:0 0 auto!important;
+  }
+}
+@media (max-width: 380px){
+  .nav{padding-left:12px!important;padding-right:12px!important;}
+  .nav-brand{font-size:7px!important;}
+  .nav-links{font-size:6.8px!important;letter-spacing:.08em!important;}
+}
+</style>
